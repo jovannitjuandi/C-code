@@ -1,0 +1,242 @@
+#!/bin/sh
+
+# UNIQUE SORTED CASE
+    echo "UNIQUE SORTED"
+    echo "================================================="
+
+    # 5000 INPUT NUMBER
+        echo "5000 input size dataset 1"
+        echo "------------------------------"
+        seq 5000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "5000 input size dataset 2"
+        echo "------------------------------"
+        seq 5000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "5000 input size dataset 3"
+        echo "------------------------------"
+        seq 5000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+    # FINISH 5000 INPUT NUMBER
+
+    # 10000 INPUT NUMBER
+        echo "10000 input size dataset 1"
+        echo "------------------------------"
+        seq 10000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "10000 input size dataset 2"
+        echo "------------------------------"
+        seq 10000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "10000 input size dataset 3"
+        echo "------------------------------"
+        seq 10000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+    # FINISH 10000 INPUT NUMBER
+    
+    # 25000 INPUT NUMBER
+        echo "25000 input size dataset 1"
+        echo "------------------------------"
+        seq 25000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "25000 input size dataset 2"
+        echo "------------------------------"
+        seq 25000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "25000 input size dataset 3"
+        echo "------------------------------"
+        seq 25000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+    # FINISH 25000 INPUT NUMBER
+    
+    # 50000 INPUT NUMBER
+        echo "50000 input size dataset 1"
+        echo "------------------------------"
+        seq 50000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "50000 input size dataset 2"
+        echo "------------------------------"
+        seq 50000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+        
+        echo "50000 input size dataset 3"
+        echo "------------------------------"
+        seq 50000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 03 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+    # FINISH 50000 INPUT NUMBER
+    
+    # 100000 INPUT NUMBER
+        echo "100000 input size dataset 1"
+        echo "------------------------------"
+        seq 100000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+
+        echo "100000 input size dataset 2"
+        echo "------------------------------"
+        seq 100000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+        
+        echo "100000 input size dataset 3"
+        echo "------------------------------"
+        seq 100000 > randomFile
+        sort -n randomFile > nums
+        rm randomFile
+        for t in 01 02 
+        do
+            echo "=== Test $t ==="
+            time ./useIntList < nums > out1
+            time sort -n < nums > out2
+            diff out1 out2
+            echo "  "
+        done
+        echo "  "
+    # FINISH 100000 INPUT NUMBER
+    rm nums
+# FINISH UNIQUE SORTED CASE

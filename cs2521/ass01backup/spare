@@ -1,0 +1,216 @@
+if (d == NULL) {
+        return newLink(w)->data;
+    }
+    
+    // insert recursively
+    int cmp = strcmp(time, n->time);
+    if (cmp < 0) {
+        n->left = doInsert(n->left, time);
+    } else if (cmp > 0) {
+        n->right = doInsert(n->right, time);
+    } else { // (cmp == 0)
+        // if time is already in the tree,
+        // we can return straight away
+        return n;
+    }
+    
+    
+    
+        Link l = d->tree;
+        while (strcmp(w, l->data->word) != 0) {
+            if (l->data->word != NULL) {
+                if (strcmp(w, l->data->word) > 0) {
+                    l = l->right;
+                } else {
+                    l = l->left;
+                }
+            }
+            
+            if (l == NULL) {
+                return NULL;
+            }
+        }
+        return l->data;
+        
+        
+        
+// word by word processing
+    /*int i = 0;
+    int j = 0;
+    
+    fgets(curr, MAXLINE, in);
+    fgets(curr, MAXLINE, in);
+    fgets(curr, MAXLINE, in);
+    fgets(curr, MAXLINE, in);
+    fgets(curr, MAXLINE, in);
+    
+    printf("|%s|", curr);
+    char temp[MAXWORD];
+    while (i < strlen(curr)) {
+        if (isWordChar(curr[i])) {
+            temp[j] = tolower(curr[i]);
+            j++;
+        }  else if (curr[i] == SPACE) {
+           temp[j] = '\0';
+           j = 0;
+        } else if (curr[i] == '\n' ) {
+           temp[j] = '\0';
+           j = 0;
+        } else {
+            printf("N/A");
+        }
+        printf("[%s]\n", temp);
+        i++;
+    }*/
+    
+    
+    // debugging
+    /*strcpy(curr, "Where to Go");
+    char curWord[MAXWORD];
+    int index = 0;
+    for (int i = 0; i < strlen(curr); i++) {
+        if ((curr[i] != SPACE)) {
+            curWord[index] = curr[i];
+            index++;
+        } else {
+            curWord[index] = '\0';
+            index = 0;
+            printf("'%s'\n", curWord);
+        }
+    }*/
+    
+    // USING STRTOK()
+    //strcpy(curr, "Lorem Ipsum Is A Dummy File\n");
+    /*printf("<%s>", curr);
+    char delimiter[] = " \n";
+    char *str[MAXWORD];
+    int k = 0;
+    str[k] = strtok(curr, delimiter);
+    while (str[k] != NULL) {
+        printf("string [%d] = [%s]\n", k, str[k]);
+        k++;
+        str[k] = strtok(NULL, delimiter);
+    }*/
+        
+    // get line by line
+    /*while (fgets(curr, MAXLINE, in) != NULL) {
+        
+    }*/
+    
+ // CHECK HOW STEMMER WORKS
+    /*printf("HOW STEMMER WORKS: \n");
+    char testWord[MAXWORD] = "meetings";
+    
+    printf("BEFORE: '%s' [index = %d]\n", testWord, (strlen(testWord)));
+    int ans = stem(testWord, 0, strlen(testWord)-1);
+    
+    testWord[ans + 1] = '\0';
+    printf("AFTER: '%s' [index = %d]\n", testWord, ans);*/
+    
+    
+   // TEMPORARY START ================================================
+    /*case 1:
+       printf("Entering TESTING MODE... \n");
+       
+       Dict test = newDict();
+       char *input = "hello";
+       WFreq *newWord1 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord1->word, newWord1->freq);
+       
+       input = "bye";
+       WFreq *newWord2 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord2->word, newWord2->freq);
+       
+       input = "carrot";
+       WFreq *newWord3 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord3->word, newWord3->freq);
+       
+       input = "door";
+       WFreq *newWord4 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord4->word, newWord4->freq);
+       
+       input = "asia";
+       WFreq *newWord5 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord5->word, newWord5->freq);
+       
+       input = "abe";
+       WFreq *newWord6 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord6->word, newWord6->freq);
+       
+       input = "beam";
+       WFreq *newWord7 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord7->word, newWord7->freq);
+       
+       input = "account";
+       WFreq *newWord8 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord8->word, newWord8->freq);
+       
+       input = "zebra";
+       WFreq *newWord9 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord9->word, newWord9->freq);
+       
+       input = "xylo";
+       WFreq *newWord10 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord10->word, newWord10->freq);
+       
+       input = "egg";
+       WFreq *newWord11 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord11->word, newWord11->freq);
+       
+       input = "carat";
+       WFreq *newWord12 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord12->word, newWord12->freq);
+       
+       input = "carrot";
+       WFreq *newWord13 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord13->word, newWord13->freq);
+       
+       input = "hello";
+       WFreq *newWord14 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord14->word, newWord14->freq);
+       
+       input = "xylo";
+       WFreq *newWord15 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord15->word, newWord15->freq);
+       
+       input = "xylo";
+       WFreq *newWord16 = DictInsert(test, input);
+       printf("%s [%d]\n", newWord15->word, newWord15->freq);
+       
+       showDict(test);
+       
+       printf("\n");
+       WFreq *findWord1 = DictFind(test, "abe");
+       printf("%s\n", findWord1->word);
+       
+       WFreq *findWord2 = DictFind(test, "rat");
+       //printf("%s\n", findWord2->word);
+       if (findWord2 == NULL) {
+            printf("Word Not Found!\n");
+       }
+       
+       WFreq *findWord3 = DictFind(test, "carrot");
+       printf("%s\n", findWord3->word);
+       
+       WFreq topNW[5];
+       findTopN(test, topNW, 5);
+       
+       printf("%s [%d]\n", topNW[0].word, topNW[0].freq);
+       printf("%s [%d]\n", topNW[1].word, topNW[1].freq);
+       printf("%s [%d]\n", topNW[2].word, topNW[2].freq);
+       printf("%s [%d]\n", topNW[3].word, topNW[3].freq);
+       printf("%s [%d]\n", topNW[4].word, topNW[4].freq);*/
+       
+       // using pointer not array
+       /*WFreq *topNW = (WFreq *) malloc(4*sizeof(WFreq));
+       findTopN(test, topNW, 4);
+       
+       printf("%s [%d]\n", topNW[0].word, topNW[0].freq);
+       printf("%s [%d]\n", topNW[1].word, topNW[1].freq);
+       printf("%s [%d]\n", topNW[2].word, topNW[2].freq);
+       printf("%s [%d]\n", topNW[3].word, topNW[3].freq);
+       
+       return 0;
+       break;*/
+   
+   // TEMPORARY END ==================================================

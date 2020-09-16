@@ -1,0 +1,63 @@
+Input	Initial	    Has	    Number	AvgTime	    AvgTime
+Size	Order	    Dups	ofruns	foruser	    forsort
+5000	random	    no	    9	    0.058sec	0.004sec
+5000	sorted	    no	    9	    0.000sec	0.000sec
+5000	reverse	    no	    9	    0.000sec	0.000sec
+5000	random	    yes	    9	    0.041sec	0.002sec
+5000	sorted	    yes	    9	    0.002sec	0.001sec
+5000	reverse	    yes	    9	    0.000sec	0.001sec
+10000	random	    no	    9	    0.211sec	0.006sec
+10000	sorted	    no	    9	    0.004sec	0.003sec
+10000	reverse	    no	    9	    0.000sec	0.001sec
+10000	random	    yes	    9	    0.188sec	0.004sec
+10000	sorted	    yes	    9	    0.002sec	0.002sec
+10000	reverse	    yes	    9	    0.002sec	0.001sec
+25000	random	    no	    9	    2.227sec	0.021sec
+25000	sorted	    no	    9	    0.007sec	0.004sec
+25000	reverse	    no	    9	    0.006sec	0.004sec
+25000	random	    yes	    9	    2.214sec	0.014sec
+25000	sorted	    yes	    9	    0.006sec	0.004sec
+25000	reverse	    yes	    9	    0.008sec	0.008sec
+50000	random	    no	    9	    11.15sec	0.040sec
+50000	sorted	    no	    9	    0.018sec	0.012sec
+50000	reverse	    no	    9	    0.018sec	0.010sec
+50000	random	    yes	    9	    11.09sec	0.040sec
+50000	sorted	    yes	    9	    0.013sec	0.013sec
+50000	reverse	    yes	    9	    0.013sec	0.013sec
+100000	random	    no	    6	    49.56sec	0.092sec
+100000	sorted	    no	    6	    0.024sec	0.019sec
+100000	reverse	    no	    6	    0.020sec	0.019sec
+100000	random	    yes	    6	    49.44sec	0.098sec
+100000	sorted	    yes	    6	    0.025sec	0.024sec
+100000	reverse	    yes	    6	    0.026sec	0.027sec
+
+Firstly, it's very noticeable that the default sorting is almost always
+faster than the user made code in sorting the numbers. this could be due to 
+a much more efficient algorithm and method of solving 
+(for instance by first checking data randomness). 
+
+Another noticeable trend is that sorting is faster with sorted and reverse
+lists compared to random. Also, duplicates does not make 
+much of a difference in this example. Plus (always), more digits, more time.
+
+the user made code, sorts by finding the position of a number in a list, 
+this method takes a long time when it comes to a more random input data 
+because it'll have to go through the list almost as many times as there are 
+number in the list (worst case). (also note that the user code saves numbers 
+as a linked list, may not be relevant unless default sort algorithm is known). 
+
+The user code sorts by finding position in a linked list, which makes it very 
+fast when dealing with a sorted list (ascending or descending), this is 
+because with such lists, best case scenario always takes place. 
+(The user code first checks best case scenarios, that is the number is in 
+first or last position, thus, no need to go through the list).
+
+Additionally, when it comes to duplicates, it does not make much difference. In 
+user code, values equal to smallest or largest is considered best case scenarios.
+
+In case duplicate value to the largest or smallest is not taken into account, 
+duplicates will take longer because, what happen is if a value is a duplicate of the 
+largest number, instead of being added to the end, it would go through the list 
+to get to the second last place before placing the value in that position. 
+[Although, for the allowed maximum input in this example, it might not make much 
+of a difference in time] (show screenshot of having no equal sign in 3rd case) 

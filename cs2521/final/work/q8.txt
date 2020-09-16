@@ -1,0 +1,36 @@
+# COMP2521 20T2 Final Exam Q8
+
+(a) how many words
+
+#words: 11
+
+
+(b) search for "battle"
+
+visited nodes: 'b'->'a'->'t'->(not found)
+not found because there's not t after t
+
+
+(c) search for "deeds"
+
+visited nodes: 'd'->(not found) 
+assuming implementation in the lecture slide.
+it will check nodes connected to d and realise there's no e
+not found because there's no e after d
+
+node: depending on the struct node, might need to visit 'o'-> and 'r'-> to check 
+value. If necessary, the order between 'o'-> and 'r'-> depends on implementation
+
+
+(d) new nodes after "bogus" added
+
+#new nodes: 2
+new nodes: 'u' (black) and 's' (red)
+place after 'b'->'o'->'g'->
+
+
+(e) new nodes after "do" was added
+
+#new nodes: 0
+there's no new nodes but 'o' after d in 'd'->'o'->(finished) 
+change color from black to red

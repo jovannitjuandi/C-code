@@ -1,0 +1,34 @@
+# COMP2521 20T2 Final Exam Q4
+# replace xxx by your answer
+
+(a) height of tree
+
+height of tree: 2
+
+
+(b) max height with 7 nodes
+
+max height: 6
+
+
+(c) who is parent of 26?
+
+left child of 30
+
+
+(d) insertion order to produce perfect balance
+
+insertion order: 25, 15, 40, 5, 20, 30, 50
+
+
+(e) maximum stored values in 2-3-4 tree with two levels
+
+maximum number: 15
+(3 at root) + (3 in each child)*(4 child possible) = 15
+
+
+
+(f) values in root after 42 inserted
+
+at root: 20, 30, 50
+

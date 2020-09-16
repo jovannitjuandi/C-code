@@ -1,0 +1,58 @@
+// CASE 3: CURRENT NODE MORE THAN INPUT
+        else if (TimeCmp(n->time, t) > 0) {
+            if (n->left == NULL) {
+                return n->time;
+            } else {
+                if (n->left->right == NULL) {
+                    if (TimeCmp(n->left->time, t) < 0) {
+                        return n->time;
+                    } else {
+                        return ceiling(n->left, t);
+                    }
+                } else {
+                    if ((TimeCmp(n->left->time, t) < 0) & 
+                    (TimeCmp(n->left->right->time, t) < 0)) {
+                        return n->time;
+                    } else {
+                        return ceiling(n->left, t);
+                    }
+                }
+            }
+        }
+        
+        // CASE 4: CURRENT NODE LESS THAN INPUT
+        else if (TimeCmp(n->time, t) < 0) {
+            if (n->right == NULL) {
+                return NULL; // input value is larger than any in the tree
+            } else {
+                return ceiling(n->right, t);
+            }
+        }
+        
+        
+        
+        if (TimeCmp(higher, after) > 0) {
+                TimeShow(higher);
+                TimeShow(after);
+                TreeInsert(s->times, t);
+                s->count++;
+                return true;
+            } else {
+                TimeShow(after);
+                return false;
+            }
+            
+            
+            
+            if ((TimeCmp(higher, after) > 0) & (TimeCmp(before, lower) < 0)) {
+                TimeShow(higher);
+                TimeShow(after);
+                TimeShow(before);
+                TimeShow(lower);
+                TreeInsert(s->times, t);
+                s->count++;
+                return true;
+            } else {
+                TimeShow(t);
+                return false;
+            }

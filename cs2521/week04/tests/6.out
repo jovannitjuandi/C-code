@@ -1,0 +1,49 @@
+Runway Landing Scheduler v1.0
+Enter ? to see the list of commands.
+> + 4 3 1100
+Successfully added Apr 03 11:00 to the schedule!
+> + 4 4 1100
+Successfully added Apr 04 11:00 to the schedule!
+> + 4 5 1100
+Successfully added Apr 05 11:00 to the schedule!
+> + 4 3 1200
+Successfully added Apr 03 12:00 to the schedule!
+> + 4 1 1100
+Successfully added Apr 01 11:00 to the schedule!
+> + 4 2 1200
+Successfully added Apr 02 12:00 to the schedule!
+> + 4 8 1200
+Successfully added Apr 08 12:00 to the schedule!
+> + 4 3 1050
+Couldn't add Apr 03 10:50 to the schedule!
+> + 4 3 110
+Successfully added Apr 03 01:10 to the schedule!
+> + 4 3 1210
+Couldn't add Apr 03 12:10 to the schedule!
+> + 5 3 1200
+Successfully added May 03 12:00 to the schedule!
+> + 6 6 100
+Successfully added Jun 06 01:00 to the schedule!
+> s 1
+Apr 01 11:00
+Apr 02 12:00
+Apr 03 01:10
+Apr 03 11:00
+Apr 03 12:00
+Apr 04 11:00
+Apr 05 11:00
+Apr 08 12:00
+May 03 12:00
+Jun 06 01:00
+> s 2
+Apr 03 11:00 (height: 3)
+┝━╸L: Apr 02 12:00 (height: 1)
+│     ┝━╸L: Apr 01 11:00 (height: 0)
+│     ┕━╸R: Apr 03 01:10 (height: 0)
+┕━╸R: Apr 08 12:00 (height: 2)
+      ┝━╸L: Apr 04 11:00 (height: 1)
+      │     ┝━╸L: Apr 03 12:00 (height: 0)
+      │     ┕━╸R: Apr 05 11:00 (height: 0)
+      ┕━╸R: May 03 12:00 (height: 1)
+            ┕━╸R: Jun 06 01:00 (height: 0)
+> 

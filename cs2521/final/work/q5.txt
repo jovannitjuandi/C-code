@@ -1,0 +1,49 @@
+# COMP2521 20T2 Final Exam Q5
+# Replace xxx with your answer
+
+(a) #cliques
+
+#cliques: 0 
+assuming pairs are not considered clique
+
+
+(b) # connected components
+
+#connected components: 4
+
+
+
+(c) reachable from C
+
+#Node reachable from C: 0
+No node is reachable from C since it has no outgoing edge
+
+
+(d) reachable from J
+
+#Node reachable from J: 1
+Reachable Nodes: K
+
+
+(e) reachable from G
+
+#Node reachable from G: 2
+Reachable Nodes: F and H
+
+
+(f) #edges in longest path
+
+longest path: from I to K
+#edges: 2
+
+
+(g) #cc's after adding C->H
+
+#CC after C->H: 3
+
+
+(h) reachable from G after adding G->I
+
+#Node reachable from G: 5
+Reachable Nodes: F, H, I, J, K
+

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# DUPLICATE RANDOM CASE
+    echo "DUPLICATE SORTED"
+        echo "5000 input size dataset 1"
+        echo "------------------------------"
+        ./randList 5000 > randomFile
+        sort -nr randomFile > nums
+        rm randomFile
+
+
+
